@@ -1,5 +1,8 @@
 <div class="post list">
   <% @posts.each do |post|%>
+    <% if user_signed_in? %>
+      <p><%= post.user%></p>
+    <% end %>
     <strong><%= post.title %><br></strong>
     <p><%= post.body %></p>
   <% end %>
