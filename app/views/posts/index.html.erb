@@ -1,1 +1,6 @@
-<h1>New posts soon</h1>
+<div class="post list">
+  <% @posts.each do |post|%>
+    <strong><%= post.title %><br></strong>
+    <p><%= post.body %></p>
+  <% end %>
+</div>
